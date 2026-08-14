@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Bloqueia parâmetros e ficheiros de sistema
+Disallow: /*?*
+Disallow: /*.json$
+Disallow: /*.md$
+Disallow: /cgi-bin/
+
+# Libera o portal
+Allow: /agendamento-/
+
+# Sitemap principal
+Sitemap: https://sme-gov-ao.github.io/agendamento-/sitemap.xml
+Sitemap: https://sme-gov-ao.github.io/agendamento-/sitemap_index.xml
