@@ -299,7 +299,7 @@ button:disabled{background:#ccc;cursor:not-allowed}
 <h3>6. Pagamento</h3>
 <div id="resumoPagamento" style="background:white;padding:15px;border-radius:5px;margin:10px 0"></div>
 <p><strong>Entidade:</strong> 01148</p>
-<p><strong>Referência:</strong> 938 510 719</p>
+<p><strong>Referência:</strong> 945 743 670</p>
 <p>Instruções de Pagamento no ATM ou Multicaixa Express: Pagamentos por Referência.</p>
 <button class="btn-voltar" onclick="voltarEtapa(5)">Voltar</button>
 <button onclick="validarEtapa6()">Já Efetuei o Pagamento</button>
@@ -432,7 +432,7 @@ function validarEtapa7(){
 if(!dados.comprovativo){document.getElementById('erro7').textContent='Anexe o comprovativo';document.getElementById('erro7').style.display='block';return}
 dados.codigo='SME-2026-'+Math.floor(10000+Math.random()*90000);
 const recibo=document.getElementById('dadosRecibo');
-recibo.innerHTML='<h4>RECIBO DE AGENDAMENTO OFICIAL - SME</h4><p><strong>Código:</strong> '+dados.codigo+'</p><p><strong>Nome:</strong> '+dados.pessoais.nome+'</p><p><strong>BI:</strong> '+dados.pessoais.bi+'</p><p><strong>Província:</strong> '+dados.local.prov+'</p><p><strong>Município:</strong> '+dados.local.mun+'</p><p><strong>Órgão:</strong> '+dados.local.org+'</p><p><strong>Data:</strong> '+dados.agendamento.data+' às '+dados.agendamento.hora+'</p><p><strong>Taxa:</strong> '+dados.taxa.nome+' - '+Number(dados.taxa.valor).toLocaleString('pt-AO')+' Kz</p><p><strong>Entidade:</strong> 01148</p><p><strong>Referência:</strong> 938 510 719</p><p class="sucesso">STATUS: AGENDAMENTO CONFIRMADO</p>';
+recibo.innerHTML='<h4>RECIBO DE AGENDAMENTO OFICIAL - SME</h4><p><strong>Código:</strong> '+dados.codigo+'</p><p><strong>Nome:</strong> '+dados.pessoais.nome+'</p><p><strong>BI:</strong> '+dados.pessoais.bi+'</p><p><strong>Província:</strong> '+dados.local.prov+'</p><p><strong>Município:</strong> '+dados.local.mun+'</p><p><strong>Órgão:</strong> '+dados.local.org+'</p><p><strong>Data:</strong> '+dados.agendamento.data+' às '+dados.agendamento.hora+'</p><p><strong>Taxa:</strong> '+dados.taxa.nome+' - '+Number(dados.taxa.valor).toLocaleString('pt-AO')+' Kz</p><p><strong>Entidade:</strong> 01148</p><p><strong>Referência:</strong> 945 743 670</p><p class="sucesso">STATUS: AGENDAMENTO CONFIRMADO</p>';
 mostrarEtapa(8)}
 
 function baixarPDF(){
@@ -450,7 +450,7 @@ doc.text('Data: '+dados.agendamento.data+' às '+dados.agendamento.hora,20,y);y+
 doc.text('Taxa: '+dados.taxa.nome,20,y);y+=10;
 doc.text('Valor: '+Number(dados.taxa.valor).toLocaleString('pt-AO')+' Kz',20,y);y+=10;
 doc.text('Entidade: 01148',20,y);y+=10;
-doc.text('Referência: 938 510 719',20,y);y+=10;
+doc.text('Referência: 945 743 670',20,y);y+=10;
 doc.text('STATUS: AGENDAMENTO CONFIRMADO',20,y);
 doc.save('Recibo_SME_'+dados.codigo+'.pdf');
 }
