@@ -3,38 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <title>SME Angola - Portal Oficial de Agendamento de Passaporte Online</title>
 
 <!-- Verificação Google Search Console -->
-
 <meta name="google-site-verification" content="ZrjZbiqctgZzf4s7qdRBSabNk2NgLwX42i6FB8pEjto" />
 
 <!-- Verificação Bing Webmaster Tools -->
-
 <meta name="msvalidate.01" content="39E9F7B43B4D585906BDD3958699D88C" />
 
-<!-- Verificação Yandex -->
+<!-- SEO Básico Google -->
+<meta name="description" content="Portal Oficial do SME Angola para agendamento de passaporte online. Emita ou renove seu passaporte. Taxas: normal 30.500 Kz, urgente 45.000 Kz. Serviço oficial do SME.">
+<meta name="keywords" content="SME Angola, passaporte Angola, agendamento passaporte, migração Angola, SME Luanda, renovar passaporte, passaporte urgente, 938 510 719">
+<meta name="author" content="Serviço de Migração e Estrangeiros - Angola">
+<meta name="language" content="Portuguese">
+<meta name="geo.region" content="AO-LUA">
+<meta name="geo.placename" content="Luanda, Angola">
+<meta name="geo.position" content="-8.839;13.289">
+<meta name="ICBM" content="-8.839, 13.289">
 
+<!-- Meta Tags Mobile -->
+<meta name="theme-color" content="#1E5AA8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="SME Angola Passaporte">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=yes">
 
+<!-- Canonical URL -->
+<link rel="canonical" href="https://sme-gov-ao.github.io/agendamento-/">
 
 <!-- Open Graph para Facebook, WhatsApp, LinkedIn -->
-
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sme-gov-ao.github.io/agendamento-/">
 <meta property="og:title" content="SME Angola - Portal Oficial de Agendamento de Passaporte">
 <meta property="og:description" content="Agende seu passaporte online. Taxas: Normal 30.500 Kz, Urgente 45.000 Kz. Serviço oficial do SME.">
 <meta property="og:image" content="https://sme-gov-ao.github.io/agendamento-/logo-sme.png">
-<meta property="og:url" content="https://sme-gov-ao.github.io/agendamento-/">
-<meta property="og:type" content="website">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_AO">
+<meta property="og:site_name" content="SME Angola">
 
 <!-- Twitter Card -->
-
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://sme-gov-ao.github.io/agendamento-/">
 <meta name="twitter:title" content="SME Angola - Agendamento de Passaporte">
-<meta name="twitter:description" content="Portal Oficial do Serviço de Migração e Estrangeiros de Angola">
+<meta name="twitter:description" content="Portal Oficial do Serviço de Migração e Estrangeiros de Angola - Agende seu passaporte online.">
 <meta name="twitter:image" content="https://sme-gov-ao.github.io/agendamento-/logo-sme.png">
-<meta name="description" content="Portal Oficial do SME Angola para agendamento de passaporte online. Emita ou renove seu passaporte. Taxas: normal 30.500 Kz, urgente 45.000 Kz.">
-<meta name="keywords" content="SME Angola, passaporte, agendamento passaporte, migração Angola, SME Luanda, renovar passaporte">
-<meta name="author" content="Serviço de Migração e Estrangeiros - Angola">
+
+<!-- Favicon CORRIGIDO -->
+<link rel="icon" type="image/png" href="https://sme-gov-ao.github.io/agendamento-/logo-sme.png">
+<link rel="apple-touch-icon" href="https://sme-gov-ao.github.io/agendamento-/logo-sme.png">
+<link rel="shortcut icon" href="https://sme-gov-ao.github.io/agendamento-/logo-sme.png">
+
+<!-- Dados Estruturados Google - Organização Governamental CORRIGIDO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GovernmentOrganization",
+  "name": "Serviço de Migração e Estrangeiros - Angola",
+  "alternateName": "SME Angola",
+  "url": "https://sme-gov-ao.github.io/agendamento-/",
+  "logo": "https://sme-gov-ao.github.io/agendamento-/logo-sme.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+244-938-510-719",
+    "contactType": "customer service",
+    "email": "sme.gov.contacto@gmail.com",
+    "availableLanguage": ["Portuguese"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Amílcar Cabral",
+    "addressLocality": "Maianga, Luanda",
+    "addressCountry": "AO"
+  }
+}
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <style>
@@ -68,107 +113,22 @@ button:disabled{background:#ccc;cursor:not-allowed}
 .footer a{color:#FFD500}
 .hidden{display:none}
 @media(max-width:600px){.container{margin:10px;padding:10px}.nav a{display:block;margin:5px 0}}
-/* Botão WhatsApp Flutuante */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-.whatsapp-float:hover {
-    background-color: #128c7e;
-}
-/* Contador */
-.contador {
-    background: linear-gradient(135deg, #0066cc, #004499);
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin: 30px 0;
-}
-.contador h3 {
-    font-size: 36px;
-    margin: 0;
-}
-/* FAQ */
-.faq-item {
-    background: #f8f9fa;
-    padding: 15px;
-    margin: 10px 0;
-    border-left: 4px solid #0066cc;
-    border-radius: 5px;
-}
-.faq-item strong {
-    color: #0066cc;
-}
-/* Documentos */
-.doc-box {
-    background: #fff3cd;
-    border: 2px solid #ffc107;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-.doc-box h4 {
-    color: #856404;
-    margin-top: 0;
-}
-.doc-box ul {
-    margin: 10px 0;
-    padding-left: 20px;
-}
-.doc-box li {
-    margin: 8px 0;
-}
+.whatsapp-float{position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow:2px 2px 3px #999;z-index:100;display:flex;align-items:center;justify-content:center;text-decoration:none}
+.whatsapp-float:hover{background-color:#128c7e}
+.contador{background:linear-gradient(135deg,#0066cc,#004499);color:white;padding:20px;border-radius:10px;text-align:center;margin:30px 0}
+.contador h3{font-size:36px;margin:0}
+.faq-item{background:#f8f9fa;padding:15px;margin:10px 0;border-left:4px solid #0066cc;border-radius:5px}
+.faq-item strong{color:#0066cc}
+.doc-box{background:#fff3cd;border:2px solid #ffc107;padding:20px;border-radius:10px;margin:20px 0}
+.doc-box h4{color:#856404;margin-top:0}
+.doc-box ul{margin:10px 0;padding-left:20px}
+.doc-box li{margin:8px 0}
 </style>
-
-<!-- Favicon -->
-
-<link rel=" icon"  type=" imagem / png"  href=" logo-sme . png">
-
-  <!-- Dados Estruturados Google - Organização Governamental -->
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "GovernmentOrganization",
-    "name": "Serviço de Migração e Estrangeiros - Angola",
-    "alternateName": "SME Angola",
-    "url": " https://sme-gov-ao.github.io/agendamento-/ ",
-    "logo": "https://sme-gov-ao.github.io/agendamento-/logo-sme.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+244-938-510-719",
-      "contactType": "customer service",
-      "email": "sme.gov.contacto@gmail.com"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Amílcar Cabral",
-      "addressLocality": "Maianga, Luanda",
-      "addressCountry": "AO"
-    }
-  }
-  </script>
 </head>
 <body>
 
 <div class="header">
-<img src="logo-sme.png" alt="SME Angola" style="height:70px;margin:0 15px;vertical-align:middle">
-<img src="logo-governo.png" alt="Governo de Angola" style="height:70px;margin:0 15px;vertical-align:middle">
+<img src="https://sme-gov-ao.github.io/agendamento-/logo-sme.png" alt="SME Angola" style="height:70px;margin:0 15px;vertical-align:middle">
 <h1>SME <br>Serviço de Migração e Estrangeiros</h1>
 <span class="badge">PORTAL OFICIAL</span>
 <p style="margin-top:10px;font-size:18px">Agendamento de Passaporte Angolano Online</p>
@@ -227,7 +187,7 @@ button:disabled{background:#ccc;cursor:not-allowed}
 <h3>2. Dados Pessoais</h3>
 <input type="text" id="nomeCompleto" placeholder="Nome completo" required>
 <input type="text" id="bi" placeholder="Nº BI: 123456789LA123" required>
-<input type="date" id="dataNasc" required="" max="2026-08-12" />
+<input type="date" id="dataNasc" required />
 <input type="text" id="morada" placeholder="Morada completa" required>
 <div class="erro" id="erro2"></div>
 <button class="btn-voltar" onclick="voltarEtapa(1)">Voltar</button>
@@ -283,7 +243,7 @@ button:disabled{background:#ccc;cursor:not-allowed}
 
 <div class="etapa hidden" id="etapa5">
 <h3>5. Data e Hora</h3>
-<input type="date" id="dataAgendamento" required="" min="2026-08-12" />
+<input type="date" id="dataAgendamento" required />
 <select id="horaAgendamento" required>
 <option value="" selected>Selecione a hora</option>
 <option>08:00</option><option>08:30</option><option>09:00</option><option>09:30</option>
@@ -333,6 +293,8 @@ button:disabled{background:#ccc;cursor:not-allowed}
 <p>Sede: Rua Amílcar Cabral, Maianga, Luanda</p>
 <p>© 2026 SME Angola - Todos os direitos reservados</p>
 </div>
+
+<a href="https://wa.me/244938510719" class="whatsapp-float" target="_blank">💬</a>
 
 <script>
 let dados = {};
@@ -469,14 +431,15 @@ window.open('mailto:sme.gov.contacto@gmail.com?subject='+assunto+'&body='+corpo,
 
 function novoAgendamento(){location.reload()}
 
-// Configurar data mínima
 document.addEventListener('DOMContentLoaded',function(){
 const hoje=new Date().toISOString().split('T')[0];
 document.getElementById('dataAgendamento').min=hoje;
-document.getElementById('dataNasc').max=hoje;
+const nascMax=new Date(); nascMax.setFullYear(nascMax.getFullYear()-14);
+document.getElementById('dataNasc').max=nascMax.toISOString().split('T')[0];
+const barra=document.getElementById('barraProgresso');
+if(barra){barra.style.width='12.5%'}
 });
 </script>
-
 
 </body>
 </html>
